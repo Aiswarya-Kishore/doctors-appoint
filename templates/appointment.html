@@ -1,0 +1,133 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<!--Page Title-->
+<section class="page-title text-center" style="background-image:url(static/images/background/3.jpg);">
+    <div class="container">
+        <div class="title-text">
+            <h1>appointment</h1>
+            <ul class="title-menu clearfix">
+                <li>
+                    <a href="index.html">home &nbsp;/</a>
+                </li>
+                <li>appointment</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+<!-- Contact Section -->
+<section class="blog-section section style-three pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="contact-area style-two">
+                    <div class="section-title">
+                        <h3>Request <span>Appointment</span></h3>
+                    </div>
+                    <form name="contact_form" class="default-form contact-form" action="validation" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Name" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <select name="depsubject">
+                                        <option value="" disabled selected >Departments</option>
+                                        <option value="diagnostic">Diagnostic</option>
+                                        <option value="psychological">Psychological</option>
+                                    </select>
+                                </div>                            
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Phone" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="date" placeholder="Date" required="" id="datepicker">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </div> 
+                                <div class="form-group">
+                                    <select name="docsubject">
+                                        <option value="" disabled selected >Doctor</option>
+                                        <option value="arun">arun</option>
+                                        <option value="prasad">Prasad</option>
+                                    </select>
+                                </div>                            
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <textarea name="formmessage" placeholder="Your Message" ></textarea>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn-style-one">submit now</button>
+                                </div>                            
+                            </div>
+                        </div>
+                    </form>
+                </div>                      
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="appointment-image-holder">
+                    <figure>
+                        <img src="static/images/background/appoinment.jpg" alt="Appointment">
+                    </figure>
+                </div>                       
+            </div>
+        </div>                    
+    </div>
+</section>
+<!-- End Contact Section -->
+
+<!--team section-->
+<section class="team-section section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Our Expert
+                <span>Doctors</span>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo, rerum 
+                <br>natus nobis deleniti doloremque minima odit voluptatibus ipsam animi?</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-member">
+                    <img src="static/images/team/doctor-2.jpg" alt="doctor" class="img-responsive">
+                    <div class="contents text-center">
+                        <h4>Dr. Robert Barrethion</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
+                        <a href="#" class="btn btn-main">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-member">
+                    <img src="static/images/team/doctor-lab-3.jpg" alt="doctor" class="img-responsive">
+                    <div class="contents text-center">
+                        <h4>Dr. Marry Lou</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
+                        <a href="#" class="btn btn-main">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-member">
+                    <img src="static/images/team/event-2.jpg" alt="doctor" class="img-responsive">
+                    <div class="contents text-center">
+                        <h4>Dr. Sansa Stark</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
+                        <a href="#" class="btn btn-main">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End team section-->
+{% endblock %}
+
