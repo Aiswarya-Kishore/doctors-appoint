@@ -17,6 +17,9 @@ urlpatterns=[
     path('appointmentapprovals',views.appointmentapprovals),
     path('doctorlist',views.doctorlist),
     path('adddoctor',views.adddoctor),
-    path('adddepartments',views.adddepartments)
+    path('adddepartments',views.adddepartments),
+    path('plus',views.plus),
+    path('adddoc',views.plusdoctor),
+    path('logout',views.logout)
 
 ]

@@ -6,23 +6,20 @@
                         <thead>
                           <tr>
                             <th scope="col">Name</th>
-                            <th scope="col">Display Name</th>
-                            <th scope="col">Details</th>
+                            <th scope="col">message</th>
+                            <th scope="col">Doctor</th>
                             <th scope="col" colspan="2" style="text-align: center;">Actions</th>
                           </tr>
                         </thead>
-                        {% if aprovals %}
+                        
                         <tbody>
-                            {% for i in aprovals %}
+                          {% if k %}
+                          {% for i in k %}
                           <tr>
-                            <td>{{i.name}}</td>
-                            <td>{{i.display_name}}</td>
-                            <td><a href="viewArtist?id={{i.artist_id}}" style="color: black;">view</a></td>
-                            <td><a href="aproveArtist?id={{i.artist_id}}" style="color: black;">Aprove</a></td>
-                            <td><a href="denyArtist?id={{i.artist_id}}" style="color: black;">Deny</a></td>
-                          </tr>
-                            {% endfor %}
+                            <td>{{i.name}}</td><td>{{i.message}}</td><td>{{i.docter}}</td>
+                          
                         </tbody>
+                        {% endfor %}
                         {% endif %}
                       </table>
                 </section>

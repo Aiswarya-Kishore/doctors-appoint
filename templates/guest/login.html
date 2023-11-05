@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        form{
+            width:100%;
+            height:fit-content;
+            display:grid;
+            justify-content: center;
+
+        }
+        img{
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>login</h1>
+        <label>username:</label><input type="text" name="username"><br/><br/>
+        <label>password:</label><input type="password" name="password"><br/><br/>
+        <input type="submit" name="submit" value="submit">
+        {{k}}
+
+        </form>
+        <br><br>
+        
+
+</body>
+</html>

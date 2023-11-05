@@ -13,22 +13,21 @@
                         </thead>
                     
                         <tbody>
+                          {% if k %}
+                          {% for i in k %}
+                          <tr><td>{{i.depname}}</td><td>{{i.ndoctors}}</td></tr>
+                          {% endfor %}
+                          {% endif %}
                             
-                          <tr>
-                            
-                            <td>{{i.name}}</td>
-                            <td>{{i.posts}}</td>
-                            <td colspan="2" style="text-align: center;">
-                            <a href="delCat?id={{i.cat_id}}"><i class="fa fa-minus-square fa-2x"></i></a></td>
-                          </tr>
+                          
                             
                         </tbody>
                         
-                        <form method="post">
+                        <form method="post" action="plus">
                             {% csrf_token %}
                         <tr>
-                            
-                            <td><input type="text" placeholder="Add departments" name="cat"> </td>  
+                          
+                            <td><input type="text" placeholder="Add departments" name="depname"> </td>  
                             <td></td>              
                             <td style="text-align: center;" colspan="2"><button class="btn" style="padding: 0px;margin: 0px;" type="submit"><i class="fa fa-plus-square fa-2x"></i></button></td>
                         </tr>
