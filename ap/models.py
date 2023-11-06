@@ -6,7 +6,6 @@ class appointments(models.Model):
     email=models.CharField(max_length=20)
     phone=models.CharField(max_length=10)
     date=models.CharField(max_length=10)
-    docter=models.CharField(max_length=10)
     departments=models.CharField(max_length=20)
     message=models.CharField(max_length=100)
 
